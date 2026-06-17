@@ -225,9 +225,9 @@ export default async function Page() {
                           {getArabicDayName(entry.day_of_week)}
                         </span>
                         {/* Optional: Add day number or badge */}
-                        <span className="text-xs text-gray-400 font-mono">
+                        {/* <span className="text-xs text-gray-400 font-mono">
                           #{entry.day_of_week}
-                        </span>
+                        </span> */}
                       </div>
                     </td>
                     <td className="px-6 py-4">
