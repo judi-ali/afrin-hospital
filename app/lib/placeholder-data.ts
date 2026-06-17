@@ -1,147 +1,365 @@
-// This file contains placeholder data that you'll be replacing with real data in the Data Fetching chapter:
-// https://nextjs.org/learn/dashboard-app/fetching-data
-const users = [
+// app/lib/placeholder-data.ts
+
+export const departments = [
   {
-    id: '410544b2-4001-4271-9855-fec4b6a6442a',
-    name: 'User',
-    email: 'user@nextmail.com',
-    password: '123456',
+    id: "550e8400-e29b-41d4-a716-446655440001",
+    name: "بولية",
+  },
+  {
+    id: "550e8400-e29b-41d4-a716-446655440002",
+    name: "قلبية",
+  },
+  {
+    id: "550e8400-e29b-41d4-a716-446655440003",
+    name: "جراحة عامة",
+  },
+  {
+    id: "550e8400-e29b-41d4-a716-446655440004",
+    name: "عظمية",
+  },
+  {
+    id: "550e8400-e29b-41d4-a716-446655440005",
+    name: "داخلية",
+  },
+  {
+    id: "550e8400-e29b-41d4-a716-446655440006",
+    name: "نسائية",
+  },
+  {
+    id: "550e8400-e29b-41d4-a716-446655440007",
+    name: "أسنان",
+  },
+  {
+    id: "550e8400-e29b-41d4-a716-446655440008",
+    name: "الأوعية",
+  },
+  {
+    id: "550e8400-e29b-41d4-a716-446655440009",
+    name: "جراحة أطفال",
+  },
+  {
+    id: "550e8400-e29b-41d4-a716-446655440010",
+    name: "تجميلية",
+  },
+  {
+    id: "550e8400-e29b-41d4-a716-446655440011",
+    name: "الأطفال",
+  },
+  {
+    id: "550e8400-e29b-41d4-a716-446655440012",
+    name: "الأذنية",
+  },
+  {
+    id: "550e8400-e29b-41d4-a716-446655440013",
+    name: "العينية",
+  },
+  {
+    id: "550e8400-e29b-41d4-a716-446655440014",
+    name: "جراحة فكية",
+  },
+  {
+    id: "550e8400-e29b-41d4-a716-446655440015",
+    name: "ايكو",
   },
 ];
 
-const customers = [
+export const scheduleByDay = [
+  // Saturday (day: 0)
   {
-    id: 'd6e15727-9fe1-4961-8c5b-ea44a9bd81aa',
-    name: 'Evil Rabbit',
-    email: 'evil@rabbit.com',
-    image_url: '/customers/evil-rabbit.png',
+    id: "660e8400-e29b-41d4-a716-446655440001",
+    day: 0,
+    departmentId: "550e8400-e29b-41d4-a716-446655440001",
   },
   {
-    id: '3958dc9e-712f-4377-85e9-fec4b6a6442a',
-    name: 'Delba de Oliveira',
-    email: 'delba@oliveira.com',
-    image_url: '/customers/delba-de-oliveira.png',
+    id: "660e8400-e29b-41d4-a716-446655440002",
+    day: 0,
+    departmentId: "550e8400-e29b-41d4-a716-446655440003",
   },
   {
-    id: '3958dc9e-742f-4377-85e9-fec4b6a6442a',
-    name: 'Lee Robinson',
-    email: 'lee@robinson.com',
-    image_url: '/customers/lee-robinson.png',
+    id: "660e8400-e29b-41d4-a716-446655440003",
+    day: 0,
+    departmentId: "550e8400-e29b-41d4-a716-446655440004",
   },
   {
-    id: '76d65c26-f784-44a2-ac19-586678f7c2f2',
-    name: 'Michael Novotny',
-    email: 'michael@novotny.com',
-    image_url: '/customers/michael-novotny.png',
+    id: "660e8400-e29b-41d4-a716-446655440004",
+    day: 0,
+    departmentId: "550e8400-e29b-41d4-a716-446655440006",
   },
   {
-    id: 'CC27C14A-0ACF-4F4A-A6C9-D45682C144B9',
-    name: 'Amy Burns',
-    email: 'amy@burns.com',
-    image_url: '/customers/amy-burns.png',
+    id: "660e8400-e29b-41d4-a716-446655440005",
+    day: 0,
+    departmentId: "550e8400-e29b-41d4-a716-446655440007",
   },
   {
-    id: '13D07535-C59E-4157-A011-F8D2EF4E0CBB',
-    name: 'Balazs Orban',
-    email: 'balazs@orban.com',
-    image_url: '/customers/balazs-orban.png',
+    id: "660e8400-e29b-41d4-a716-446655440006",
+    day: 0,
+    departmentId: "550e8400-e29b-41d4-a716-446655440008",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440007",
+    day: 0,
+    departmentId: "550e8400-e29b-41d4-a716-446655440011",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440008",
+    day: 0,
+    departmentId: "550e8400-e29b-41d4-a716-446655440012",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440009",
+    day: 0,
+    departmentId: "550e8400-e29b-41d4-a716-446655440013",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440010",
+    day: 0,
+    departmentId: "550e8400-e29b-41d4-a716-446655440015",
+  },
+
+  // Sunday (day: 1)
+  {
+    id: "660e8400-e29b-41d4-a716-446655440011",
+    day: 1,
+    departmentId: "550e8400-e29b-41d4-a716-446655440003",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440012",
+    day: 1,
+    departmentId: "550e8400-e29b-41d4-a716-446655440004",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440013",
+    day: 1,
+    departmentId: "550e8400-e29b-41d4-a716-446655440005",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440014",
+    day: 1,
+    departmentId: "550e8400-e29b-41d4-a716-446655440006",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440015",
+    day: 1,
+    departmentId: "550e8400-e29b-41d4-a716-446655440007",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440016",
+    day: 1,
+    departmentId: "550e8400-e29b-41d4-a716-446655440008",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440017",
+    day: 1,
+    departmentId: "550e8400-e29b-41d4-a716-446655440011",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440018",
+    day: 1,
+    departmentId: "550e8400-e29b-41d4-a716-446655440012",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440019",
+    day: 1,
+    departmentId: "550e8400-e29b-41d4-a716-446655440013",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440020",
+    day: 1,
+    departmentId: "550e8400-e29b-41d4-a716-446655440015",
+  },
+
+  // Monday (day: 2)
+  {
+    id: "660e8400-e29b-41d4-a716-446655440021",
+    day: 2,
+    departmentId: "550e8400-e29b-41d4-a716-446655440003",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440022",
+    day: 2,
+    departmentId: "550e8400-e29b-41d4-a716-446655440004",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440023",
+    day: 2,
+    departmentId: "550e8400-e29b-41d4-a716-446655440005",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440024",
+    day: 2,
+    departmentId: "550e8400-e29b-41d4-a716-446655440006",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440025",
+    day: 2,
+    departmentId: "550e8400-e29b-41d4-a716-446655440007",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440026",
+    day: 2,
+    departmentId: "550e8400-e29b-41d4-a716-446655440009",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440027",
+    day: 2,
+    departmentId: "550e8400-e29b-41d4-a716-446655440010",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440028",
+    day: 2,
+    departmentId: "550e8400-e29b-41d4-a716-446655440011",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440029",
+    day: 2,
+    departmentId: "550e8400-e29b-41d4-a716-446655440014",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440030",
+    day: 2,
+    departmentId: "550e8400-e29b-41d4-a716-446655440015",
+  },
+
+  // Tuesday (day: 3)
+  {
+    id: "660e8400-e29b-41d4-a716-446655440031",
+    day: 3,
+    departmentId: "550e8400-e29b-41d4-a716-446655440002",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440032",
+    day: 3,
+    departmentId: "550e8400-e29b-41d4-a716-446655440003",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440033",
+    day: 3,
+    departmentId: "550e8400-e29b-41d4-a716-446655440004",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440034",
+    day: 3,
+    departmentId: "550e8400-e29b-41d4-a716-446655440005",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440035",
+    day: 3,
+    departmentId: "550e8400-e29b-41d4-a716-446655440006",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440036",
+    day: 3,
+    departmentId: "550e8400-e29b-41d4-a716-446655440007",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440037",
+    day: 3,
+    departmentId: "550e8400-e29b-41d4-a716-446655440011",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440038",
+    day: 3,
+    departmentId: "550e8400-e29b-41d4-a716-446655440014",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440039",
+    day: 3,
+    departmentId: "550e8400-e29b-41d4-a716-446655440015",
+  },
+
+  // Wednesday (day: 4)
+  {
+    id: "660e8400-e29b-41d4-a716-446655440040",
+    day: 4,
+    departmentId: "550e8400-e29b-41d4-a716-446655440001",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440041",
+    day: 4,
+    departmentId: "550e8400-e29b-41d4-a716-446655440002",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440042",
+    day: 4,
+    departmentId: "550e8400-e29b-41d4-a716-446655440003",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440043",
+    day: 4,
+    departmentId: "550e8400-e29b-41d4-a716-446655440004",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440044",
+    day: 4,
+    departmentId: "550e8400-e29b-41d4-a716-446655440005",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440045",
+    day: 4,
+    departmentId: "550e8400-e29b-41d4-a716-446655440006",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440046",
+    day: 4,
+    departmentId: "550e8400-e29b-41d4-a716-446655440007",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440047",
+    day: 4,
+    departmentId: "550e8400-e29b-41d4-a716-446655440010",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440048",
+    day: 4,
+    departmentId: "550e8400-e29b-41d4-a716-446655440011",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440049",
+    day: 4,
+    departmentId: "550e8400-e29b-41d4-a716-446655440015",
+  },
+
+  // Thursday (day: 5)
+  {
+    id: "660e8400-e29b-41d4-a716-446655440050",
+    day: 5,
+    departmentId: "550e8400-e29b-41d4-a716-446655440003",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440051",
+    day: 5,
+    departmentId: "550e8400-e29b-41d4-a716-446655440004",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440052",
+    day: 5,
+    departmentId: "550e8400-e29b-41d4-a716-446655440005",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440053",
+    day: 5,
+    departmentId: "550e8400-e29b-41d4-a716-446655440006",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440054",
+    day: 5,
+    departmentId: "550e8400-e29b-41d4-a716-446655440007",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440055",
+    day: 5,
+    departmentId: "550e8400-e29b-41d4-a716-446655440009",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440056",
+    day: 5,
+    departmentId: "550e8400-e29b-41d4-a716-446655440011",
+  },
+  {
+    id: "660e8400-e29b-41d4-a716-446655440057",
+    day: 5,
+    departmentId: "550e8400-e29b-41d4-a716-446655440015",
   },
 ];
 
-const invoices = [
-  {
-    customer_id: customers[0].id,
-    amount: 15795,
-    status: 'pending',
-    date: '2022-12-06',
-  },
-  {
-    customer_id: customers[1].id,
-    amount: 20348,
-    status: 'pending',
-    date: '2022-11-14',
-  },
-  {
-    customer_id: customers[4].id,
-    amount: 3040,
-    status: 'paid',
-    date: '2022-10-29',
-  },
-  {
-    customer_id: customers[3].id,
-    amount: 44800,
-    status: 'paid',
-    date: '2023-09-10',
-  },
-  {
-    customer_id: customers[5].id,
-    amount: 34577,
-    status: 'pending',
-    date: '2023-08-05',
-  },
-  {
-    customer_id: customers[2].id,
-    amount: 54246,
-    status: 'pending',
-    date: '2023-07-16',
-  },
-  {
-    customer_id: customers[0].id,
-    amount: 666,
-    status: 'pending',
-    date: '2023-06-27',
-  },
-  {
-    customer_id: customers[3].id,
-    amount: 32545,
-    status: 'paid',
-    date: '2023-06-09',
-  },
-  {
-    customer_id: customers[4].id,
-    amount: 1250,
-    status: 'paid',
-    date: '2023-06-17',
-  },
-  {
-    customer_id: customers[5].id,
-    amount: 8546,
-    status: 'paid',
-    date: '2023-06-07',
-  },
-  {
-    customer_id: customers[1].id,
-    amount: 500,
-    status: 'paid',
-    date: '2023-08-19',
-  },
-  {
-    customer_id: customers[5].id,
-    amount: 8945,
-    status: 'paid',
-    date: '2023-06-03',
-  },
-  {
-    customer_id: customers[2].id,
-    amount: 1000,
-    status: 'paid',
-    date: '2022-06-05',
-  },
-];
-
-const revenue = [
-  { month: 'Jan', revenue: 2000 },
-  { month: 'Feb', revenue: 1800 },
-  { month: 'Mar', revenue: 2200 },
-  { month: 'Apr', revenue: 2500 },
-  { month: 'May', revenue: 2300 },
-  { month: 'Jun', revenue: 3200 },
-  { month: 'Jul', revenue: 3500 },
-  { month: 'Aug', revenue: 3700 },
-  { month: 'Sep', revenue: 2500 },
-  { month: 'Oct', revenue: 2800 },
-  { month: 'Nov', revenue: 3000 },
-  { month: 'Dec', revenue: 4800 },
-];
-
-export { users, customers, invoices, revenue };
+export default { departments, scheduleByDay };
